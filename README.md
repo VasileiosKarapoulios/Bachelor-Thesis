@@ -36,7 +36,7 @@ The y axis in the left graph corresponds to the sum of all features and the x ax
       sittin → sitting (addition of "g" in the end)
       
    The threshold used in this case, so that a word is similar to another one is 3 and the lexicon that we used is NRC Emotion Lexicon, a little bit editied to follow the needs of this project. 
-   2) The trust factor shows how much a customer trusts the company. 
+   2) The trust factor shows how much a customer trusts the company and the Lexicon_for_trust is used for this purpose. It contains words that declare trust.  
    
 Thus, a matrix is created that contains for each tweet the sentiment polarity and the trust value.
    
