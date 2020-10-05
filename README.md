@@ -89,7 +89,6 @@ Below we present the graphs after 2000 new tweets
 
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000NoSpamPNG?raw=true) 
 
-
 Below, the Silhouette scores are presented in the barplot
 
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Silhouette.PNG?raw=true)   
