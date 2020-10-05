@@ -95,7 +95,7 @@ Below, the Silhouette scores are presented in the barplot
 
 As we observe, as we keep adding new observations to the clustering, the quality gets worse, which is reasonable.
 
-  All in all, the removal of the spam messages improve the study of the consumer behavior as we see more clearly the sentiment and the trust factor of them and they correspond to the reality. 
+  All in all, the removal of the spam messages improve the study of the consumer behavior, as the sentiment and the trust factor and they correspond to the reality. The clustering as we can conclude from the silhouette factor has a slightly better quality after removing spam tweets. We also observe from the Silhouette graph that the less the quality is in the initial clustering (black bar) the higher the difference is in the quality of the clustering for sentiment analysis when including/excluding spam messages. Thus, the removal of the spam messages doesn't affect negatively the study, it even improves it slightly.  
 
 **Improvement** 
 
