@@ -13,17 +13,17 @@ The goal is to detect and remove spam tweets, in order to study better the behav
 
   First of all, the data were collected using Twitter's Streaming API which provides read-only permissions to the data. The data are stored in a twitter_data.csv file and more specifically, date and time - user's name - user's id - tweet - tweet's id - number of followers - number of followings - are stored. At the beginning 10.000 tweets are collected. Due to the nature of the tweets, a pre-processing of the data is needed, thus tokenization, stemming/lemmatization, upper to lower case methods are applied and moreover html/https links, numbers and stop-words are removed. Due to the encoding of the tweets, emojis and characters that origin from non-english keyboard are stored with ASCII codes. The reason for not removing them, is that tweets that contain massive amounts of those, refer usually to spams. Last but not least, number of mentions (@), number of hashtags (#), links and words that contain ASCII codes are counted. These will represent our 4 features per each tweet for the clustering algorithm, as we assume that tweets that contain certain amounts of those features refer to spam posts. Below is an example of this preprocessing mentioned before (the username is erased manually on purpose):
   
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Preprocessing.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/Preprocessing.PNG?raw=true)
 
   In the next step, there a n x 4 matrix created, where n is the number of tweets and 4 the number of features (the previously counted ones). The weights are chosen after experiments and are 0.25,0.25,0.4,0.1 respectively. In addition to this, mentions and hashtags are taken into consideration if and only if they are counted more than 3 and 2 respectively, whereas links if they are more than 1 and ASCII code words more than 4. The value in each cell of the matrix is a result of the product between the weight of each feature and the corresponding difference of counted number-threshold of the feature. I.e if there are 5 mentions in a tweet, the value of the corresponding cell will be 
 (5-3) * 0.25. This is a way to deal with outliers. The next picture shows a sketch of the matrix:
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Matrix.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/Matrix.PNG?raw=true)
 
   After this is done, we apply the clustering K-Means algorithm for 4 cluster. It's worth mentioning that the sklearn library is used. The algorithm returns the following clusters: 
   
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Clustering10000.PNG?raw=true)
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/PercentTweets.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/Clustering10000.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/PercentTweets.PNG?raw=true)
 
 The y axis in the left graph corresponds to the sum of all features and the x axis is a random number. These are used **only** to spread and illustrate the clusters. The cluster that defines spam is the cluster with the color dimgrey and they apart ~0.41% of the collected tweets. 
 
