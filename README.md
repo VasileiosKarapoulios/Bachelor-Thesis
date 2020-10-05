@@ -40,19 +40,19 @@ The y axis in the left graph corresponds to the sum of all features and the x ax
    
 Thus, a matrix is created that contains for each tweet the sentiment polarity and the trust value.
    
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust.PNG?raw=true)  
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrust.PNG?raw=true)  
 
 Having created this table, we apply K-Means again on this n x 2 matrix for 4 clusters. 
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust10000.PNG?raw=true)
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/PercentSentimentTrust.PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrust10000.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/PercentSentimentTrust.PNG?raw=true) 
 
 The x axis corresponds to the trust-value and the y axis corresponds to the sentiment polarity. We can observe, that there are clusters created with customers with very little trust to the company (chocolate), customers with neutral values for trust and positive (darkred) or negative(red) sentiment polarity and finally customers with high values for trust and positive sentiment polarity (saddlebrown). Again, the Silhouette score is used to evaluate the clustering and it turns out to be ~0.5003. 
 
   Now we remove the spam tweets and we perform again the same analysis.
   
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust10000NoSpam.PNG?raw=true)
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/PercentSentimentTrust10000NoSpam.PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrust10000NoSpam.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/PercentSentimentTrust10000NoSpam.PNG?raw=true) 
 
 There are clusters created with customers with very little trust to the company (midnightblue), customers with neutral values for trust and positive (royalblue) or negative(mediumblue) sentiment polarity and finally customers with high values for trust and positive sentiment polarity (slateblue). We observe now that we have removed the spam messages, the percentages have changed with the only significant change refering to the customers with neutral values for trust and positive values of sentiment polarity from ~11.2 to 11.68. These kind of customers, seem to like the company, thus it was good to remove those spam messages so that they are more distinct. Again, the Silhouette score is ~0.5008.
 
@@ -60,38 +60,38 @@ There are clusters created with customers with very little trust to the company 
 
 The 20 new tweets clustering
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/20newtweetsClustering.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/20newtweetsClustering.PNG?raw=true)
 
 The 20 new tweets sentiment analysis-trust factor
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/20newtweetsSentimentTrust.PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/20newtweetsSentimentTrust.PNG?raw=true) 
 
 The 20 new tweets sentiment analysis-trust factor after removing spam
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/20newtweetsSentimentTrustNoSpam.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/20newtweetsSentimentTrustNoSpam.PNG?raw=true)
 
 The connection of the 20 new tweets with the previous clustering
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/ClusterConnection1020.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/ClusterConnection1020.PNG?raw=true)
 
 The connection of the 20 new tweets sentiment analysis-trust factor with the previous collection
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrustConnection1020.PNG?raw=true)
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrustConnection1020.PNG?raw=true)
 
 The connection of the 20 new tweets sentiment analysis-trust factor with the previous collection after removing spam
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrustConnection1020NoSpam.PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrustConnection1020NoSpam.PNG?raw=true) 
 
 
 Below we present the graphs after 2000 new tweets 
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000.PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrust12000.PNG?raw=true) 
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000NoSpam.PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/SentimentTrust12000NoSpam.PNG?raw=true) 
 
 Below, the Silhouette scores are presented in the barplot
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Silhouette.PNG?raw=true)   
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/tree/main/Screenshots/Silhouette.PNG?raw=true)   
 
 As we observe, as we keep adding new observations to the clustering, the quality gets worse, which is reasonable.
 
