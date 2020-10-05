@@ -54,13 +54,31 @@ The x axis corresponds to the trust-value and the y axis corresponds to the sent
 There are clusters created with customers with very little trust to the company (midnightblue), customers with neutral values for trust and positive (royalblue) or negative(mediumblue) sentiment polarity and finally customers with high values for trust and positive sentiment polarity (slateblue). We observe now that we have removed the spam messages, the percentages have changed with the only significant change refering to the customers with neutral values for trust and positive values of sentiment polarity from ~11.2 to 11.68. These kind of customers, seem to like the company, thus it was good to remove those spam messages so that they are more distinct. Again, the Silhouette score is ~0.5008.
 
   At this point, we proceed to the live-streaming part, in which tweets keep coming and the previous process is repeated over and over again. In order to achieve this, the system processes the data every 20 new tweets. So, every 20 new tweets all of the above steps are repeated with the only difference that now we include the previous clustering along with the new 20 tweets. This means that, after clustering the new 20 data, the new cluster centers and the old cluster centers are compared and the new data are assigned to the cluster that their center is closest to regarding the old cluster centers. In the next graphs the process for 20 new tweets is illustrated:
-  
+
+The 20 new tweets clustering
+
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/20newtweetsClustering.PNG?raw=true)
+
+The 20 new tweets sentiment analysis-trust factor
+
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/20newtweetsSentimentTrust.PNG?raw=true) 
+
+The 20 new tweets sentiment analysis-trust factor after removing spam
+
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/20newtweetsSentimentTrustNoSpam.PNG?raw=true)
+
+The connection of the 20 new tweets with the previous clustering
+
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/ClusterConnection1020.PNG?raw=true)
+
+The connection of the 20 new tweets sentiment analysis-trust factor with the previous collection
+
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrustConnection1020.PNG?raw=true)
+
+The connection of the 20 new tweets sentiment analysis-trust factor with the previous collection after removing spam
+
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrustConnection1020NoSpam.PNG?raw=true) 
+
 
   
 
