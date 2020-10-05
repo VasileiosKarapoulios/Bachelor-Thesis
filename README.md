@@ -85,9 +85,9 @@ The connection of the 20 new tweets sentiment analysis-trust factor with the pre
 
 Below we present the graphs after 2000 new tweets 
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000PNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000.PNG?raw=true) 
 
-![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000NoSpamPNG?raw=true) 
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000NoSpam.PNG?raw=true) 
 
 Below, the Silhouette scores are presented in the barplot
 
