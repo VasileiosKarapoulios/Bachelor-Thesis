@@ -1,12 +1,13 @@
 # Bachelor-Thesis
 Remove unwanted messages to more effectively study consumers’ behavior on Twitter
 
-Description: K-Means clustering on live-streaming data (using Twitter’s streaming
-API) to detect spam/non-spam tweets – “Starbucks” Case Study (#starbucks) –
-considering 4 features in each post and apply sentiment analysis and trust analysis
-using NLTK library and NRC Emotion Lexicon.
+**Description** 
+K-Means clustering on live-streaming data (using Twitter’s streaming API) to detect spam/non-spam tweets – “Starbucks” Case Study (#starbucks) – considering 4 features in each post and apply sentiment analysis and trust analysis using NLTK library and NRC Emotion Lexicon.
 
-Process: 
+**Goal**
+The goal is to detect and remove spam tweets, in order to study better the behavior of the consumers, for example how they feel about the company or if they trust them. 
+
+**Process** 
 
   First of all, the data were collected using Twitter's Streaming API which provides read-only permissions to the data. The data are stored in a twitter_data.csv file and more specifically, date and time - user's name - user's id - tweet - tweet's id - number of followers - number of followings - are stored. At the beginning 10.000 tweets are collected. Due to the nature of the tweets, a pre-processing of the data is needed, thus tokenization, stemming/lemmatization, upper to lower case methods are applied and moreover html/https links, numbers and stop-words are removed. Due to the encoding of the tweets, emojis and characters that origin from non-english keyboard are stored with ASCII codes. The reason for not removing them, is that tweets that contain massive amounts of those, refer usually to spams. Last but not least, number of mentions (@), number of hashtags (#), links and words that contain ASCII codes are counted. These will represent our 4 features per each tweet for the clustering algorithm, as we assume that tweets that contain certain amounts of those features refer to spam posts. Below is an example of this preprocessing mentioned before (the username is erased manually on purpose):
   
@@ -79,6 +80,11 @@ The connection of the 20 new tweets sentiment analysis-trust factor with the pre
 
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrustConnection1020NoSpam.PNG?raw=true) 
 
+Below, the Silhouette scores are presented in the barplot
 
-  
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Silhouette.PNG?raw=true)   
 
+As we observe, as we keep adding new observations to the clustering, the quality gets worse, which is reasonable.
+
+**Improvement** 
+As we observed, the quality of the clustering gets worse and worse as we add more observations to the existing clusters. Thus, a good improvement would be to re-run the K-Means clustering from the beginning after a specific number of iterations, for example after every 2000 tweets. 
