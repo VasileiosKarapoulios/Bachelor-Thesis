@@ -2,9 +2,11 @@
 Remove unwanted messages to more effectively study consumers’ behavior on Twitter
 
 **Description** 
+
 K-Means clustering on live-streaming data (using Twitter’s streaming API) to detect spam/non-spam tweets – “Starbucks” Case Study (#starbucks) – considering 4 features in each post and apply sentiment analysis and trust analysis using NLTK library and NRC Emotion Lexicon.
 
 **Goal**
+
 The goal is to detect and remove spam tweets, in order to study better the behavior of the consumers, for example how they feel about the company or if they trust them. 
 
 **Process** 
@@ -80,11 +82,22 @@ The connection of the 20 new tweets sentiment analysis-trust factor with the pre
 
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrustConnection1020NoSpam.PNG?raw=true) 
 
+
+Below we present the graphs after 2000 new tweets 
+
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000PNG?raw=true) 
+
+![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/SentimentTrust12000NoSpamPNG?raw=true) 
+
+
 Below, the Silhouette scores are presented in the barplot
 
 ![alt text](https://github.com/VasileiosKarapoulios/Bachelor-Thesis/blob/main/Silhouette.PNG?raw=true)   
 
 As we observe, as we keep adding new observations to the clustering, the quality gets worse, which is reasonable.
 
+  All in all, the removal of the spam messages improve the study of the consumer behavior as we see more clearly the sentiment and the trust factor of them and they correspond to the reality. 
+
 **Improvement** 
+
 As we observed, the quality of the clustering gets worse and worse as we add more observations to the existing clusters. Thus, a good improvement would be to re-run the K-Means clustering from the beginning after a specific number of iterations, for example after every 2000 tweets. 
